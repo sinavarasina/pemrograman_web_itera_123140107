@@ -124,8 +124,8 @@ maka saya menyiapkan kode js nya yang berada pada bagian `handleFormSubmit()` ya
         return;
     }
 ```
-sebelum menjelaskan lebih lanjut pada bagian course dan title itu sebenarnya tidak begitu berguna.
-cara kerja kode saya begini, dengan membuat variable message dan isValid, maka tiap message akan ditambahkan membentuk daftar bagian yang tidak valid dan isValid yang semulanya true menjadi false,
+sebelum menjelaskan lebih lanjut pada bagian course dan title, harus diketahui jika itu sebenarnya tidak begitu berguna.
+tapi tetap akan saya jelaskan cara kerja kode saya yaitu dengan membuat variable message dan isValid, maka tiap message akan ditambahkan membentuk daftar bagian yang tidak valid dan isValid yang semulanya true menjadi false,
 dengan begitu setelah semuanya di cek akan ada pembuktian apakah valid atau tidak, jika tidak valid maka akan muncul alert dan fungsi langsung return tanpa value sehingga tidak terjadi apa apa.
 adapun yang berguna adalah bagian deadline pada bagian `showModal()` berikut
 ```javascript
