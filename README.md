@@ -54,6 +54,10 @@ adapun fitur aplikasi diciptakan untuk memenuhi Persyaratan & Fitur Wajib Aplika
     ```bash
     npx serve varasinafarmadani_123140107_pertemuan1
     ```
+4. buka server local host yang di berikan  
+serve umumnya akan menjalankan server bagi web yang dihosting pada port 3000 seperti ini  
+![serve](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_20-00-53.png)  
+buka dengan browser yang anda gunakan.  
 
 ## Penjelasan teknis tentang penggunaan localStorage dan validasi form
 Penggunaaan localStorage disini adalah untuk menyimpan data, kita menyimpan data json dalam localStorage, lalu kita juga dapat meload json & parse kembali.
@@ -63,10 +67,10 @@ berikut adalah kode yang menyimpan/memuat JSON pada localStorage
 export const getTasks = () => JSON.parse(localStorage.getItem('tasks')) || [];
 export const saveTasks = tasks => localStorage.setItem('tasks', JSON.stringify(tasks));
 ```
-**Penjelasan getTasks**
+**Penjelasan getTasks**  
 digunakan untuk memuat data, jadi data bernama tasks pada localStorage di load dengan fungsi .getItem, lalu karena datanya berbentuk json maka kita parsing lalu simpan disuatu variable.
-namun jika data tidak ditemukan maka nilainya adalah null, dapat dilihat pada operator or || lalu fallback ke [].
-**Penjelasan saveTasks** 
+namun jika data tidak ditemukan maka nilainya adalah null, dapat dilihat pada operator or || lalu fallback ke [].  
+**Penjelasan saveTasks**  
 digunakan untuk menyimpan tasks, fungsi ini menerima parameter tasks, lalu menyimpan tasks yang juga sudah di stringify sebagai json dengan .setItem.
 
 ### Validasi Form
