@@ -33,24 +33,49 @@ export const deleteTask = id => {
 
 export const handleFormSubmit = e => {
     e.preventDefault();
-    const id = document.getElementById('taskId').value;
-    const title = document.getElementById('taskTitle').value.trim();
-    const course = document.getElementById('taskCourse').value.trim();
-    const deadline = document.getElementById('taskDeadline').value;
 
-    if (!title || !course || !deadline) {
-        alert('Semua field wajib diisi!');
-        return;
+    const id = document.getElementById('taskId').value;
+    const titleEl = document.getElementById('taskTitle');
+    const courseEl = document.getElementById('taskCourse');
+    const deadlineEl = document.getElementById('taskDeadline');
+
+    const title = titleEl.value.trim();
+    const course = courseEl.value.trim();
+    const deadline = deadlineEl.value;
+
+    let isValid = true;
+    let message = '';
+
+    if (!title) {
+        isValid = false;
+        message += '- Judul tugas wajib diisi.\n';
     }
 
-    const today = new Date();
-    const selectedDate = new Date(deadline);
+    if (!course) {
+        isValid = false;
+        message += '- Nama mata kuliah wajib diisi.\n';
+    }
 
-    today.setHours(0, 0, 0, 0);
-    selectedDate.setHours(0, 0, 0, 0);
+    if (!deadline) {
+        isValid = false;
+        message += '- Deadline wajib diisi.\n';
+    }
 
-    if (selectedDate < today) {
-        alert('Tanggal deadline tidak dapat sebelum saat ini');
+    if (deadline) {
+        const today = new Date();
+        const selectedDate = new Date(deadline);
+
+        today.setHours(0, 0, 0, 0);
+        selectedDate.setHours(0, 0, 0, 0);
+
+        if (selectedDate < today) {
+            isValid = false;
+            message += '- Tanggal deadline tidak boleh sebelum tanggal hari ini.\n';
+        }
+    }
+
+    if (!isValid) {
+        alert('Periksa kembali input Anda:\n\n' + message);
         return;
     }
 
