@@ -21,19 +21,19 @@ adapun fitur aplikasi diciptakan untuk memenuhi Persyaratan & Fitur Wajib Aplika
 | 9 | **Validasi form untuk memastikan data yang dimasukkan valid** | ✅ | Validasi gabungan HTML (`required`) dan JS (tanggal tidak boleh lewat). Input tidak dapat disubmit jika tidak ada isinya. |
 
 ## ScreenShot
-1. UI (landscape & portait)
+### UI (landscape & portait)
 ![UI landscape](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_18-56-34.png)
 ![UI potrait](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_18-56-48.png)
-2. Fitur CRUD dasar
+### Fitur CRUD dasar
 ![Tambah](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_19-35-09.png)
 ![Edit](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_19-50-14.png)
 ![Hapus](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_19-38-09.png)
-3. Validation
+### Validation
 ![Nama Tidak Boleh Kosong](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_18-39-01.png)
 ![Tanggal Harus Sesudah Hari Ini](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_18-39-51.png)
-4. Search
+### Search
 ![Pencarian](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_19-35-34.png)
-5. Status 
+### Status 
 ![Status](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_19-37-03.png)
 
 
