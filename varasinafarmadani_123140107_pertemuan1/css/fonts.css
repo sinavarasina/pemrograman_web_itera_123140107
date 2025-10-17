@@ -1,0 +1,43 @@
+/* AnonymicePro */
+@font-face {
+    font-family: 'AnonymicePro Nerd Font';
+    src: url('../fonts/AnonymousPro/AnonymiceProNerdFont-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AnonymicePro Nerd Font';
+    src: url('../fonts/AnonymousPro/AnonymiceProNerdFont-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* MesloLGS */
+@font-face {
+    font-family: 'MesloLGS NF';
+    src: url('../assets/fonts/MesloLGS/MesloLGS NF Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MesloLGS NF';
+    src: url('../assets/fonts/MesloLGS/MesloLGS NF Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'MesloLGS NF';
+    src: url('../assets/fonts/MesloLGS/MesloLGS NF Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MesloLGS NF';
+    src: url('../assets/fonts/MesloLGS/MesloLGS NF Bold Italic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}

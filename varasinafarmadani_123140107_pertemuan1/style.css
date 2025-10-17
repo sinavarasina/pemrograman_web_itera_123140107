@@ -1,0 +1,351 @@
+@import url('./css/colors.css');
+@import url('./css/fonts.css');
+
+body {
+    background-color: var(--ctp-base);
+    color: var(--ctp-text);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: var(--ctp-text);
+    text-align: center;
+    z-index: 10;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--ctp-text);
+}
+
+header .brace {
+    font-family: 'MesloNGS LS', monospace;
+    font-size: 3rem;
+    color: var(--ctp-blue);
+}
+
+header .header-content {
+    font-family: 'Anonymice Pro Nerd Font', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+}
+
+#headerTitle {
+    margin: 0;
+    color: var(--ctp-red);
+}
+
+#headerDesc {
+    margin: 0;
+    color: var(--ctp-pink);
+    text-decoration: underline;
+}
+
+#taskSection {
+    margin-top: 1.5rem;
+    background-color: var(--ctp-mantle);
+    border-style: groove;
+    border-color: var(--ctp-base);
+    border-width: 10;
+    border-radius: 5px;
+}
+
+header.taskSection {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.taskSection h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    background-color: var(--ctp-base);
+    border-radius: 5px;
+}
+
+
+.taskActions {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+#addButton {
+    flex: 1;
+    font-weight: bold;
+    border: 1px solid var(--ctp-surface0);
+    background-color: var(--ctp-green);
+    color: var(--ctp-crust);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#addButton:hover {
+    background-color: var(--ctp-teal);
+    transform: translateY(-1px);
+}
+
+#addButton:active {
+    transform: translateY(0);
+}
+
+#searchBar {
+    flex: 19;
+    border: 1px solid var(--ctp-surface0);
+    background-color: var(--ctp-crust);
+    color: var(--ctp-text);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#searchBar:hover,
+#searchBar:focus {
+    border-color: var(--ctp-blue);
+    box-shadow: 0 0 5px var(--ctp-blue);
+    outline: none;
+}
+
+#stats {
+    font-family: 'Anonymice Pro Nerd Font', monospace;
+    font-size: 0.9rem;
+    padding-right: 0.5rem;
+    text-align: right;
+}
+
+#stats .label {
+    font-weight: 600;
+    color: var(--ctp-subtext1);
+}
+
+#stats .value.total {
+    color: var(--ctp-blue);
+    font-weight: bold;
+}
+
+#stats .value.done {
+    color: var(--ctp-green);
+    font-weight: bold;
+}
+
+#stats .value.pending {
+    color: var(--ctp-red);
+    font-weight: bold;
+}
+
+#stats .separator {
+    color: var(--ctp-overlay1);
+    margin: 0 0.25rem;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--ctp-crust);
+    color: var(--ctp-text);
+    border: 1px solid var(--ctp-surface0);
+    border-radius: 5px;
+    margin: 0.25rem 0;
+    padding: 0.5rem 0.75rem;
+    transition: background-color 0.2s ease;
+}
+
+#taskList li:hover {
+    background-color: var(--ctp-surface0);
+}
+
+#taskList li span:first-child {
+    flex: 1;
+    font-family: 'Anonymice Pro Nerd Font', monospace;
+}
+
+#taskList li span:last-child {
+    display: flex;
+    gap: 0.4rem;
+}
+
+#taskList button {
+    border: none;
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#taskList button.done {
+    background-color: var(--ctp-blue);
+    color: var(--ctp-base);
+}
+
+#taskList button.done:hover {
+    background-color: var(--ctp-sapphire);
+}
+
+#taskList button.edit {
+    background-color: var(--ctp-yellow);
+    color: var(--ctp-crust);
+}
+
+#taskList button.edit:hover {
+    background-color: var(--ctp-peach);
+}
+
+#taskList button.delete {
+    background-color: var(--ctp-red);
+    color: var(--ctp-base);
+}
+
+#taskList button.delete:hover {
+    background-color: var(--ctp-maroon);
+}
+
+#taskList em {
+    display: block;
+    text-align: center;
+    color: var(--ctp-subtext1);
+    padding: 0.5rem;
+}
+
+#modal {
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    background-color: var(--ctp-base);
+    color: var(--ctp-text);
+    font-family: 'Anonymice Pro Nerd Font', monospace;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    width: 400px;
+    max-width: 90vw;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+}
+
+#modal article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#modal header {
+    text-align: center;
+    background-color: var(--ctp-mantle);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+#modal h2 {
+    margin: 0;
+    color: var(--ctp-blue);
+}
+
+#modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#modal fieldset {
+    border: 1px solid var(--ctp-surface1);
+    border-radius: 5px;
+    padding: 0.75rem;
+    background-color: var(--ctp-crust);
+}
+
+#modal legend {
+    padding: 0 0.25rem;
+    color: var(--ctp-green);
+    font-weight: bold;
+}
+
+#modal label {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--ctp-subtext1);
+}
+
+#modal input[type="text"],
+#modal input[type="date"],
+#modal input:not([type="hidden"]) {
+    width: 100%;
+    height: 1.5rem;
+    border: 1px solid var(--ctp-surface0);
+    border-radius: 4px;
+    background-color: var(--ctp-base);
+    color: var(--ctp-text);
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#modal input:focus {
+    border-color: var(--ctp-blue);
+    box-shadow: 0 0 5px var(--ctp-blue);
+    outline: none;
+}
+
+#modal form footer {
+    position: sticky;
+    bottom: 0;
+    padding-top: 0.5rem;
+    background-color: var(--ctp-base);
+    border-top: 1px solid var(--ctp-surface1);
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+
+#modal button {
+    font-family: inherit;
+    font-weight: bold;
+    border: 1px solid var(--ctp-surface0);
+    border-radius: 4px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#modal button[type="submit"] {
+    background-color: var(--ctp-green);
+    color: var(--ctp-crust);
+}
+
+#modal button[type="submit"]:hover {
+    background-color: var(--ctp-teal);
+    transform: translateY(-1px);
+}
+
+#cancelFormButton {
+    background-color: var(--ctp-red);
+    color: var(--ctp-base);
+}
+
+#cancelFormButton:hover {
+    background-color: var(--ctp-maroon);
+    transform: translateY(-1px);
+}

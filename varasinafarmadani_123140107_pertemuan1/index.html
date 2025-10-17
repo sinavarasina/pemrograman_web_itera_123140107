@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Manajemen Tugas Mahasiswa</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <span class="brace open"></span>
+        <section class="header-content">
+            <h1 id="headerTitle">IAMT</h1>
+            <p id="headerDesc">Intinya Aplikasi Manajemen Tugas</p>
+        </section>
+        <span class="brace close"></span>
+    </header>
+
+    <main>
+        <section id="taskSection">
+            <header class="taskSection">
+                <h2>DAFTAR TUGAS</h2>
+                <nav class="taskActions">
+                    <button id="addButton">Tambah<br>Tugas</button>
+                    <input type="search" id="searchBar" placeholder="Cari mata kuliah, tekan '/' untuk mencari." />
+                </nav>
+            </header>
+
+            <aside id="stats">
+                <p>
+                    <span class="label">Total:</span>
+                    <span class="value total" id="statsTotal">0</span>
+                    <span class="separator">|</span>
+
+                    <span class="label">Selesai:</span>
+                    <span class="value done" id="statsDone">0</span>
+                    <span class="separator">|</span>
+
+                    <span class="label">Belum:</span>
+                    <span class="value pending" id="statsPending">0</span>
+                </p>
+            </aside>
+
+            <ul id="taskList">
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>~ { &copy; sina_varasina } ~</p>
+    </footer>
+
+    <dialog id="modal">
+        <article>
+            <header>
+                <h2 id="modalTitle">Tambah Tugas</h2>
+            </header>
+
+            <form id="taskForm" method="dialog">
+                <input type="hidden" id="taskId">
+
+                <fieldset>
+                    <legend>Detail Tugas</legend>
+
+                    <label for="taskTitle">Judul Tugas</label>
+                    <input id="taskTitle" name="taskTitle" required>
+
+                    <label for="taskCourse">Matakuliah</label>
+                    <input id="taskCourse" name="taskCourse" required>
+
+                    <label for="taskDeadline">Deadline</label>
+                    <input type="date" id="taskDeadline" name="taskDeadline" required>
+                </fieldset>
+
+                <footer>
+                    <button type="submit">Tambah</button>
+                    <button type="button" id="cancelFormButton">Batal</button>
+                </footer>
+            </form>
+        </article>
+    </dialog>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
