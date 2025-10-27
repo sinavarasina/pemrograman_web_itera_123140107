@@ -1,3 +1,26 @@
+<details>
+<summary><strong>Daftar Isi</strong></summary>
+
+- [Tugas Praktikum 1](#tugas-praktikum-1)
+  - [Aplikasi Manajemen Tugas Mahasiswa (berbasis web)](#aplikasi-manajemen-tugas-mahasiswa-berbasis-web)
+  - [Daftar fitur yang telah diimplementasikan](#daftar-fitur-yang-telah-diimplementasikan)
+  - [ScreenShot](#screenshot)
+  - [Cara menjalankan](#cara-menjalankan)
+  - [Penjelasan teknis tentang penggunaan localStorage dan validasi form](#penjelasan-teknis-tentang-penggunaan-localstorage-dan-validasi-form)
+- [Tugas Praktikum 2](#tugas-praktikum-2)
+  - [Personal Dashboard — JavaScript Next-Gen (ES6+)](#personal-dashboard--javascript-nextgen-es6)
+  - [1) Deskripsi Singkat](#1-deskripsi-singkat)
+  - [2) Implementasi Fitur ES6+ yang Diminta](#2-implementasi-fitur-es6-yang-diminta)
+  - [3) Cara Menjalankan](#3-cara-menjalankan)
+  - [4) Struktur Proyek](#4-struktur-proyek)
+  - [5) Screenshot](#5-screenshot)
+  - [6) Checklist Kesesuaian Tugas](#6-checklist-kesesuaian-tugas)
+  - [7) Catatan Teknis](#7-catatan-teknis)
+
+</details>
+
+---
+
 # [Tugas Praktikum 1](https://github.com/sinavarasina/pemrograman_web_itera_123140107/tree/main/varasinafarmadani_123140107_pertemuan1)
 
 ---
@@ -224,10 +247,10 @@ buka dengan browser yang anda gunakan.
 ### UI (landscape & portait)
 ![UI landscape](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-20-32.png)
 ### Fitur CRUD dasar pada Tugas dan Catatan
-![Tambah Hapus Edit] (https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-26-30.png)
+![Tambah Hapus Edit](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-26-30.png)
 ### API 
-![Belum Fetch] (https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-21-16.png)
-![SudahFetch] (https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-21-22.png)
+![Belum Fetch](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-21-16.png)
+![SudahFetch](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-21-22.png)
 ### Error Handling
 ![API gagal fetch](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-24-54.png)
 ### Search
