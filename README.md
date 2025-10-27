@@ -3,13 +3,14 @@
 
 - [Tugas Praktikum 1](#tugas-praktikum-1)
   - [Aplikasi Manajemen Tugas Mahasiswa (berbasis web)](#aplikasi-manajemen-tugas-mahasiswa-berbasis-web)
-  - [Daftar fitur yang telah diimplementasikan](#daftar-fitur-yang-telah-diimplementasikan)
-  - [ScreenShot](#screenshot)
-  - [Cara menjalankan](#cara-menjalankan)
-  - [Penjelasan teknis tentang penggunaan localStorage dan validasi form](#penjelasan-teknis-tentang-penggunaan-localstorage-dan-validasi-form)
+  - [1) Deskripsi Singkat](#1-deskripsi-singkat)
+  - [2) Daftar fitur yang telah diimplementasikan](#2-daftar-fitur-yang-telah-diimplementasikan)
+  - [3) ScreenShot](#3-screenshot)
+  - [4) Cara menjalankan](#4-cara-menjalankan)
+  - [5) Penjelasan teknis tentang penggunaan localStorage dan validasi form](#5-penjelasan-teknis-tentang-penggunaan-localstorage-dan-validasi-form)
 - [Tugas Praktikum 2](#tugas-praktikum-2)
   - [Personal Dashboard — JavaScript Next-Gen (ES6+)](#personal-dashboard--javascript-nextgen-es6)
-  - [1) Deskripsi Singkat](#1-deskripsi-singkat)
+  - [1) Deskripsi Singkat](#1-deskripsi-singkat-1)
   - [2) Implementasi Fitur ES6+ yang Diminta](#2-implementasi-fitur-es6-yang-diminta)
   - [3) Cara Menjalankan](#3-cara-menjalankan)
   - [4) Struktur Proyek](#4-struktur-proyek)
@@ -26,6 +27,8 @@
 ---
 
 ## Aplikasi Manajemen Tugas Mahasiswa (berbasis web)
+
+## 1) Deskripsi Singkat
 Aplikasi ini bernama IAMT,
 Aplikasi yang dibuat untuk membantu mahasiswa mengelola aktivitas akademik mereka. 
 Aplikasi ini interaktif, fungsional, dan dapat menyimpan data secara lokal.
@@ -33,7 +36,8 @@ Aplikasi dibuat dengan HTML yang Semantik, dan JS ES6+.
 Menggunakan Color Palete Catppuccin Mocha, dengan popup/modal untuk tambah & edit tugas.
 Shortcut key seperti Search dengan '/' dan 'ESC' untuk keluar dari search.
 adapun fitur aplikasi diciptakan untuk memenuhi Persyaratan & Fitur Wajib Aplikasi dari tugas sebagai berikut
-### Daftar fitur yang telah diimplementasikan
+
+## 2) Daftar fitur yang telah diimplementasikan
 | **No** | **Persyaratan / Fitur** | **Checklist** | **Implementasi** |
 | :----: | :--- | :---: | :--- |
 | 1 | **Interaktif:** Pengguna dapat menambah, mengedit, menandai selesai, dan menghapus tugas | ✅ | Menggunakan event listener di `tasks.js` (`addEventListener` untuk tombol `Tambah`, `Edit`, `Set Selesai`, dan `Hapus`). Semua perubahan langsung terlihat di DOM tanpa reload. |
@@ -48,7 +52,7 @@ adapun fitur aplikasi diciptakan untuk memenuhi Persyaratan & Fitur Wajib Aplika
 
 ---
 
-## ScreenShot
+## 3) ScreenShot
 ### UI (landscape & portait)
 ![UI landscape](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_18-56-34.png)
 ![UI potrait](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_18-56-48.png)
@@ -66,7 +70,7 @@ adapun fitur aplikasi diciptakan untuk memenuhi Persyaratan & Fitur Wajib Aplika
 
 ---
 
-## Cara menjalankan
+## 4) Cara menjalankan
 > Sebelum menjalankan pastikan anda sudah menginstall node.js dan npm
 
 1.  clone repo ini
@@ -88,7 +92,7 @@ buka dengan browser yang anda gunakan.
 
 ---
 
-## Penjelasan teknis tentang penggunaan localStorage dan validasi form
+## 5) Penjelasan teknis tentang penggunaan localStorage dan validasi form
 Penggunaaan localStorage disini adalah untuk menyimpan data, kita menyimpan data json dalam localStorage, lalu kita juga dapat meload json & parse kembali.
 ### localStorage
 berikut adalah kode yang menyimpan/memuat JSON pada localStorage
@@ -166,12 +170,12 @@ dengan mengambil tanggal hari ini, lalu menset atribut dari taskDeadline minimal
 ---
 
 # [Tugas Praktikum 2](https://github.com/sinavarasina/pemrograman_web_itera_123140107/tree/main/varasinafarmadani_123140107_pertemuan2)
-## Personal Dashboard — JavaScript Next‑Gen (ES6+)
+## Personal Dashboard — JavaScript Next-Gen (ES6+)
 
 ---
 
 ## 1) Deskripsi Singkat
-Aplikasi **Personal Dashboard** sederhana untuk mengelola **Tugas** dan **Catatan** dengan UI ringan, tema **Catppuccin Mocha**, serta persistensi data memakai **localStorage**. Panel **Info** menampilkan waktu dari API publik menggunakan **async/await**. Seluruh kode ditulis memakai fitur **ES6+** (Next‑Gen JavaScript).
+Aplikasi **Personal Dashboard** sederhana untuk mengelola **Tugas** dan **Catatan** dengan UI ringan, tema **Catppuccin Mocha**, serta persistensi data memakai **localStorage**. Panel **Info** menampilkan waktu dari API publik menggunakan **async/await**. Seluruh kode ditulis memakai fitur **ES6+** (Next-Gen JavaScript).
 
 ### Fungsionalitas Inti
 - **Tugas**: tambah, edit, hapus, tandai selesai, cari, urutkan, hapus semua yang selesai.
@@ -189,7 +193,7 @@ Aplikasi **Personal Dashboard** sederhana untuk mengelola **Tugas** dan **Catata
   - `utils.js`: `$`, `$$`, `fmtTime`, `clamp`, `byId`, `replaceById`, `pick`.
   - `ui.js`: `bindDelegation`, renderer berbasis template literals (`renderTasks`, `renderNotes` menggunakan arrow untuk callback).
   - `main.js`: berbagai event handler (`addEventListener(..., (e) => {{...}})`).
-- **Template Literals** — render daftar pada `src/ui.js` (elemen `<li>` disusun via back‑ticks).
+- **Template Literals** — render daftar pada `src/ui.js` (elemen `<li>` disusun via back-ticks).
 - **Destructuring + Spread/Rest** —
   - `main.js`: `let { tasks, notes } = loadAll()`; update imutabel `tasks = [t, ...tasks]` dan `{ ...t, done: ... }`.
   - `utils.js`: `pick(obj, ...keys)` (rest params).
@@ -223,7 +227,6 @@ Aplikasi **Personal Dashboard** sederhana untuk mengelola **Tugas** dan **Catata
 serve umumnya akan menjalankan server bagi web yang dihosting pada port 3000 seperti ini  
 ![serve](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-23-16.png)  
 buka dengan browser yang anda gunakan.  
-
 
 ---
 
@@ -266,16 +269,15 @@ buka dengan browser yang anda gunakan.
 - [x] **Fungsionalitas & interaktivitas** (CRUD, search, sort, clear done).
 - [x] **ES6+**: let/const, ≥3 arrow fn, template literals, destructuring, spread/rest, default params, classes, modules, HOF array, async/await.
 - [x] **localStorage** untuk penyimpanan data pengguna.
-- [x] **UI/UX** rapi (tema Catppuccin Mocha, micro‑interaction hover).
+- [x] **UI/UX** rapi (tema Catppuccin Mocha, micro-interaction hover).
 - [x] **Dokumentasi** (README ini) ringkas, jelas, dan menyertakan screenshot saat pengumpulan.
 
 ---
 
 ## 7) Catatan Teknis
-- **Copy‑on‑write** dengan **spread** saat update array → menghindari mutasi tak disengaja.
+- **Copy-on-write** dengan **spread** saat update array → menghindari mutasi tak disengaja.
 - **Event Delegation** pada list dinamis mengurangi jumlah listener.
 - **Aksesibilitas**: tombol bertipe eksplisit, fokus terlihat, warna dengan kontras memadai.
 - **Tema**: palet **Catppuccin Mocha** via CSS custom properties pada `:root`.
 
 ---
-
