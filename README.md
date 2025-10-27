@@ -221,6 +221,21 @@ buka dengan browser yang anda gunakan.
 ---
 
 ## 5) Screenshot 
+### UI (landscape & portait)
+![UI landscape](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-20-32.png)
+### Fitur CRUD dasar pada Tugas dan Catatan
+![Tambah Hapus Edit] (https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-26-30.png)
+### API 
+![Belum Fetch] (https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-21-16.png)
+![SudahFetch] (https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-21-22.png)
+### Error Handling
+![API gagal fetch](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-24-54.png)
+### Search
+![Pencarian](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-29-28.png)
+### Prioritas 
+![Prioritas](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-21-02.png)
+### Sort 
+![Sort](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-21-44.png)
 
 ---
 
