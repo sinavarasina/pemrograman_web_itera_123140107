@@ -221,7 +221,7 @@ Aplikasi **Personal Dashboard** sederhana untuk mengelola **Tugas** dan **Catata
     ```
 4. buka server local host yang di berikan  
 serve umumnya akan menjalankan server bagi web yang dihosting pada port 3000 seperti ini  
-![serve](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_20-00-53.png)  
+![serve](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-23-16.png)  
 buka dengan browser yang anda gunakan.  
 
 
