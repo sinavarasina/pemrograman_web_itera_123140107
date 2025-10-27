@@ -1,4 +1,7 @@
 # [Tugas Praktikum 1](https://github.com/sinavarasina/pemrograman_web_itera_123140107/tree/main/varasinafarmadani_123140107_pertemuan1)
+
+---
+
 ## Aplikasi Manajemen Tugas Mahasiswa (berbasis web)
 Aplikasi ini bernama IAMT,
 Aplikasi yang dibuat untuk membantu mahasiswa mengelola aktivitas akademik mereka. 
@@ -20,6 +23,8 @@ adapun fitur aplikasi diciptakan untuk memenuhi Persyaratan & Fitur Wajib Aplika
 | 8 | **Menampilkan jumlah tugas yang belum selesai** | ✅ | Statistik di `<aside id="stats">` diperbarui lewat `updateStats(tasks)` — menampilkan total, selesai, dan belum selesai secara real-time. |
 | 9 | **Validasi form untuk memastikan data yang dimasukkan valid** | ✅ | Validasi gabungan HTML (`required`) dan JS (tanggal tidak boleh lewat). Input tidak dapat disubmit jika tidak ada isinya. |
 
+---
+
 ## ScreenShot
 ### UI (landscape & portait)
 ![UI landscape](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_18-56-34.png)
@@ -36,8 +41,7 @@ adapun fitur aplikasi diciptakan untuk memenuhi Persyaratan & Fitur Wajib Aplika
 ### Status 
 ![Status](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_19-37-03.png)
 
-
-
+---
 
 ## Cara menjalankan
 > Sebelum menjalankan pastikan anda sudah menginstall node.js dan npm
@@ -58,6 +62,8 @@ adapun fitur aplikasi diciptakan untuk memenuhi Persyaratan & Fitur Wajib Aplika
 serve umumnya akan menjalankan server bagi web yang dihosting pada port 3000 seperti ini  
 ![serve](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_20-00-53.png)  
 buka dengan browser yang anda gunakan.  
+
+---
 
 ## Penjelasan teknis tentang penggunaan localStorage dan validasi form
 Penggunaaan localStorage disini adalah untuk menyimpan data, kita menyimpan data json dalam localStorage, lalu kita juga dapat meload json & parse kembali.
@@ -134,7 +140,104 @@ adapun yang berguna adalah bagian deadline pada bagian `showModal()` berikut
 ```
 dengan mengambil tanggal hari ini, lalu menset atribut dari taskDeadline minimal di hari ini, user tidak dapat mengisi dengan tanggal sebelum hari ini.
 
-# Tugas Selanjutnya (comming soon)
+---
+
+# [Tugas Praktikum 2](https://github.com/sinavarasina/pemrograman_web_itera_123140107/tree/main/varasinafarmadani_123140107_pertemuan2)
+## Personal Dashboard — JavaScript Next‑Gen (ES6+)
+
+---
+
+## 1) Deskripsi Singkat
+Aplikasi **Personal Dashboard** sederhana untuk mengelola **Tugas** dan **Catatan** dengan UI ringan, tema **Catppuccin Mocha**, serta persistensi data memakai **localStorage**. Panel **Info** menampilkan waktu dari API publik menggunakan **async/await**. Seluruh kode ditulis memakai fitur **ES6+** (Next‑Gen JavaScript).
+
+### Fungsionalitas Inti
+- **Tugas**: tambah, edit, hapus, tandai selesai, cari, urutkan, hapus semua yang selesai.
+- **Catatan**: tambah, hapus.
+- **Info**: waktu dari API publik (WorldTime) + statistik tugas.
+- **Persistensi**: semua data disimpan di **localStorage** dan bertahan setelah reload.
+
+---
+
+## 2) Implementasi Fitur ES6+ yang Diminta
+> Tiap butir menyebutkan **fitur ES6+** dan **lokasi implementasi** (file/fungsi).
+
+- **let/const** — konsisten di semua modul (`src/*.js`).
+- **≥ 3 Arrow Functions** — contoh:
+  - `utils.js`: `$`, `$$`, `fmtTime`, `clamp`, `byId`, `replaceById`, `pick`.
+  - `ui.js`: `bindDelegation`, renderer berbasis template literals (`renderTasks`, `renderNotes` menggunakan arrow untuk callback).
+  - `main.js`: berbagai event handler (`addEventListener(..., (e) => {{...}})`).
+- **Template Literals** — render daftar pada `src/ui.js` (elemen `<li>` disusun via back‑ticks).
+- **Destructuring + Spread/Rest** —
+  - `main.js`: `let { tasks, notes } = loadAll()`; update imutabel `tasks = [t, ...tasks]` dan `{ ...t, done: ... }`.
+  - `utils.js`: `pick(obj, ...keys)` (rest params).
+- **Default Parameters** — `utils.js: fmtTime(ts = Date.now())`, `models.js: new Task/Note(...)` dengan nilai default.
+- **Classes** — `models.js`: `class Task`, `class Note`; `storage.js`: `class Store`.
+- **Modules (import/export)** — semua berkas di `src/` diekspor & diimpor modular.
+- **Array HOF (map/filter/sort/find)** —
+  - `ui.js`: `tasks.map(...)`.
+  - `main.js`: `tasks.filter(...)`, `tasks.find(...)`, `sorted = [...tasks].sort(sorters[...])`.
+- **Async/Await / Promise** — `api.js: fetchTime()` memakai `await fetch(...)` dan error handling.
+- **localStorage** — `storage.js: Store.tasks/Store.notes` untuk load/save JSON.
+
+---
+
+## 3) Cara Menjalankan
+> Sebelum menjalankan pastikan anda sudah menginstall node.js dan npm
+
+1.  clone repo ini
+    ```bash
+    git clone https://github.com/sinavarasina/pemrograman_web_itera_123140107.git
+    ```
+2.  cd ke repo nya
+    ```bash
+    cd pemrograman_web_itera_123140107
+    ```
+3.  jalankan aplikasi dengan serve
+    ```bash
+    npx serve varasinafarmadani_123140107_pertemuan2
+    ```
+4. buka server local host yang di berikan  
+serve umumnya akan menjalankan server bagi web yang dihosting pada port 3000 seperti ini  
+![serve](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas1/Screenshot_2025-10-17_20-00-53.png)  
+buka dengan browser yang anda gunakan.  
 
 
+---
+
+## 4) Struktur Proyek
+```
+.
+├── index.html
+├── style.css
+└── src
+    ├── api.js        # async/await (fetch waktu)
+    ├── main.js       # glue: state, event handlers, sort/filter, persist
+    ├── models.js     # Classes: Task, Note
+    ├── storage.js    # Store (localStorage)
+    ├── ui.js         # render tasks/notes + event delegation
+    └── utils.js      # helpers (arrow fn, default params, sorters, dll)
+```
+
+---
+
+## 5) Screenshot 
+
+---
+
+## 6) Checklist Kesesuaian Tugas
+- [x] **Fungsionalitas & interaktivitas** (CRUD, search, sort, clear done).
+- [x] **ES6+**: let/const, ≥3 arrow fn, template literals, destructuring, spread/rest, default params, classes, modules, HOF array, async/await.
+- [x] **localStorage** untuk penyimpanan data pengguna.
+- [x] **UI/UX** rapi (tema Catppuccin Mocha, micro‑interaction hover).
+- [x] **Dokumentasi** (README ini) ringkas, jelas, dan menyertakan screenshot saat pengumpulan.
+
+---
+
+## 7) Catatan Teknis
+- **Copy‑on‑write** dengan **spread** saat update array → menghindari mutasi tak disengaja.
+- **Event Delegation** pada list dinamis mengurangi jumlah listener.
+- **Aksesibilitas**: tombol bertipe eksplisit, fokus terlihat, warna dengan kontras memadai.
+- **Tema**: palet **Catppuccin Mocha** via CSS custom properties pada `:root`.
+
+---
 

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Dashboard — Next-Gen JS — PrakPemWeb2</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <header class="app-header">
+        <h1>Personal Dashboard</h1>
+        <div class="status">
+            <span id="timeText">--:--</span>
+            <button id="btnSync" title="Sync waktu via API">Sync</button>
+        </div>
+    </header>
+
+    <main class="grid">
+        <section class="card" id="tasksCard">
+            <header class="card-header">
+                <h2>Tugas</h2>
+                <div class="actions">
+                    <button id="btnClearDone" class="ghost">Hapus Selesai</button>
+                </div>
+            </header>
+
+            <form id="taskForm" class="form-row">
+                <input id="taskTitle" placeholder="Judul tugas…" required />
+                <select id="taskPriority">
+                    <option value="low">Low</option>
+                    <option value="med" selected>Med</option>
+                    <option value="high">High</option>
+                </select>
+                <button type="submit">Tambah</button>
+            </form>
+
+            <div class="toolbar">
+                <input id="taskSearch" placeholder="Cari…" />
+                <select id="taskSort">
+                    <option value="created_desc">Terbaru</option>
+                    <option value="created_asc">Terlama</option>
+                    <option value="priority">Prioritas</option>
+                </select>
+            </div>
+
+            <ul id="taskList" class="list"></ul>
+            <footer class="card-footer">
+                <span id="taskStats">0 tugas</span>
+            </footer>
+        </section>
+
+        <section class="card" id="notesCard">
+            <header class="card-header">
+                <h2>Catatan</h2>
+            </header>
+
+            <form id="noteForm" class="form-row">
+                <input id="noteTitle" placeholder="Judul catatan…" required />
+                <input id="noteBody" placeholder="Isi singkat…" required />
+                <button type="submit">Simpan</button>
+            </form>
+
+            <ul id="noteList" class="list notes"></ul>
+        </section>
+
+        <section class="card">
+            <header class="card-header">
+                <h2>Info</h2>
+            </header>
+            <div class="info">
+                <p><strong>Waktu (API):</strong> <span id="apiTime">menunggu…</span></p>
+                <p><strong>Statistik:</strong> <span id="statsText">—</span></p>
+                <p class="muted">Data disimpan di <code>localStorage</code>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <small>Praktikum Pengembangan Aplikasi Berbasis Web by Varasina Farmadani</small>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
