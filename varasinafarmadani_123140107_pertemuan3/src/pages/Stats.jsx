@@ -1,9 +1,10 @@
 import { useBookStats } from "../hooks/useBookStats";
+import "./Stats.css";
 
 export default function Stats() {
     const { total, milik, baca, beli } = useBookStats();
     return (
-        <div>
+        <div className="stats">
             <h1>Statistik Buku</h1>
             <p>Total Buku: {total}</p>
             <p>Milik: {milik}</p>

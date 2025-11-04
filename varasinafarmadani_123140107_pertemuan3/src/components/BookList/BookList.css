@@ -1,0 +1,43 @@
+.book-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.book-list li {
+    background: #202225;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-list li strong {
+    color: #61dafb;
+}
+
+.book-list button {
+    background: #ff5c5c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.book-list button:hover {
+    background: #e33;
+}
+
+.book-list input,
+.book-list select {
+    margin-right: 0.4rem;
+    padding: 0.3rem;
+}
+
+.book-list div button:first-child {
+    margin-right: 0.3rem;
+}

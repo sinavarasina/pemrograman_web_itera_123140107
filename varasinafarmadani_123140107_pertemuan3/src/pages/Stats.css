@@ -1,0 +1,14 @@
+.stats {
+    text-align: center;
+    padding: 2rem;
+}
+
+.stats h1 {
+    color: #61dafb;
+    margin-bottom: 1rem;
+}
+
+.stats p {
+    margin: 0.25rem 0;
+    color: #ddd;
+}

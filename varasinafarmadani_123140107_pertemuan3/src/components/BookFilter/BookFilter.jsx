@@ -1,6 +1,8 @@
+import "./BookFilter.css";
+
 export default function BookFilter({ value, onChange }) {
     return (
-        <select value={value} onChange={(e) => onChange(e.target.value)}>
+        <select className="book-filter" value={value} onChange={(e) => onChange(e.target.value)}>
             <option value="">Semua</option>
             <option value="milik">Milik</option>
             <option value="baca">Sedang Dibaca</option>
