@@ -17,7 +17,15 @@
   - [5) Screenshot](#5-screenshot)
   - [6) Checklist Kesesuaian Tugas](#6-checklist-kesesuaian-tugas)
   - [7) Catatan Teknis](#7-catatan-teknis)
-
+- [Tugas Praktikum 3](#tugas-praktikum-3)
+  - [Aplikasi Manajemen Buku Pribadi — React Dasar](#aplikasi-manajemen-buku-pribadi--react-dasar)
+  - [1) Deskripsi Singkat](#1-deskripsi-singkat)
+  - [2) Daftar Fitur](#2-daftar-fitur)
+  - [3) Screenshot](#3-screenshot)
+  - [4) Cara Menjalankan](#4-cara-menjalankan)
+  - [5) Struktur Direktori](#5-struktur-direktori)
+  - [6) Laporan Testing](#6-laporan-testing)
+  - [7) Analisis & Hook yang Digunakan](#7-analisis--hook-yang-digunakan)
 </details>
 
 ---
