@@ -336,7 +336,7 @@ Framework utama:
 ![Hasil Tambah](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas3/added.png)
 ![Edit](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas3/edit.png)
 ### Search
-![Search + Filter](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas3/searchfiler.png)
+![Search + Filter](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas3/searchfilter.png)
 ### Statistik
 ![Statistik](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas3/statistik.png)
 
