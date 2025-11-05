@@ -19,7 +19,7 @@
   - [7) Catatan Teknis](#7-catatan-teknis)
 - [Tugas Praktikum 3](#tugas-praktikum-3)
   - [Aplikasi Manajemen Buku Pribadi — React Dasar](#aplikasi-manajemen-buku-pribadi--react-dasar)
-  - [1) Deskripsi Singkat](#1-deskripsi-singkat)
+  - [1) Deskripsi Singkat](#1-deskripsi-singkat-aplikasi)
   - [2) Daftar Fitur](#2-daftar-fitur)
   - [3) Screenshot](#3-screenshot)
   - [4) Cara Menjalankan](#4-cara-menjalankan)
@@ -295,7 +295,7 @@ buka dengan browser yang anda gunakan.
 
 ---
 
-### **1) Deskripsi Singkat**
+### **1) Deskripsi Singkat Aplikasi**
 
 Aplikasi ini dibuat untuk memenuhi tugas **Praktikum Pemrograman Web — React Dasar**.
 Fungsinya untuk mengelola daftar buku pribadi dengan fitur **menambah**, **mengedit**, **menghapus**, **mencari**, dan **memfilter** berdasarkan status.
