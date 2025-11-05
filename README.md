@@ -281,3 +281,139 @@ buka dengan browser yang anda gunakan.
 - **Tema**: palet **Catppuccin Mocha** via CSS custom properties pada `:root`.
 
 ---
+
+# **Tugas Praktikum 3 — React Dasar**
+## **Aplikasi Manajemen Buku Pribadi**
+
+---
+
+### **1) Deskripsi Singkat**
+
+Aplikasi ini dibuat untuk memenuhi tugas **Praktikum Pemrograman Web — React Dasar**.
+Fungsinya untuk mengelola daftar buku pribadi dengan fitur **menambah**, **mengedit**, **menghapus**, **mencari**, dan **memfilter** berdasarkan status.
+Semua data disimpan di **localStorage**, dan state global dikelola menggunakan **React Context API**.
+
+Framework utama:
+
+* **React 19 (Vite)**
+* **Vitest + React Testing Library** untuk pengujian unit
+* **CSS modular** per-komponen untuk gaya visual
+
+---
+
+### **2) Daftar Fitur**
+
+| No | Fitur                               | Status | Implementasi                       |
+| -- | ----------------------------------- | :----: | ---------------------------------- |
+| 1  | Menambah buku baru                  |    ✅   | `BookForm.jsx`                     |
+| 2  | Mengedit buku (inline edit)         |    ✅   | `BookList.jsx`                     |
+| 3  | Menghapus buku                      |    ✅   | `BookList.jsx`                     |
+| 4  | Filter berdasarkan status           |    ✅   | `BookFilter.jsx`                   |
+| 5  | Pencarian berdasarkan judul/penulis |    ✅   | Input search di `Home.jsx`         |
+| 6  | Gunakan 2 custom hooks              |    ✅   | `useBookStats`, `useFilteredBooks` |
+| 7  | Gunakan Context API                 |    ✅   | `BookContext.jsx`                  |
+| 8  | Gunakan localStorage                |    ✅   | `useLocalStorage.jsx`              |
+| 9  | Gunakan React Router                |    ✅   | `App.jsx` (Home & Stats)           |
+| 10 | Minimal 5 Unit Test                 |    ✅   | 6 file di `/tests`                 |
+| 11 | Penanganan input kosong             |    ✅   | Validasi `BookForm` & `BookList`   |
+
+---
+
+### **3) Screenshot**
+ntar
+
+---
+
+### **4) Cara Menjalankan**
+
+```bash
+# Clone repository
+git clone https://github.com/sinavarasina/pemrograman_web_itera_123140107.git
+
+# Masuk ke direktori tugas
+cd pemrograman_web_itera_123140107/varasinafarmadani_123140107_pertemuan3
+
+# Install dependensi
+npm install
+
+# Jalankan dalam mode development
+npm run dev
+
+# Jalankan unit test
+npm run test
+```
+
+---
+
+### **5) Struktur Direktori**
+
+```
+src/
+├── App.jsx
+├── App.css
+├── assets/
+│   └── react.svg
+├── components/
+│   ├── BookForm/
+│   ├── BookList/
+│   └── BookFilter/
+├── context/
+│   └── BookContext.jsx
+├── hooks/
+│   ├── useBookStats.jsx
+│   ├── useFilteredBooks.jsx
+│   └── useLocalStorage.jsx
+├── pages/
+│   ├── Home.jsx
+│   ├── Stats.jsx
+│   ├── Home.css
+│   └── Stats.css
+└── tests/
+    ├── App.test.jsx
+    ├── BookForm.test.jsx
+    ├── BookList.test.jsx
+    ├── BookFilter.test.jsx
+    ├── Stats.test.jsx
+    ├── Search.test.jsx
+    └── setup.js
+```
+
+---
+
+### **6) Laporan Testing**
+
+```
+npm run test
+
+> varasinafarmadani_123140107_pertemuan3@0.0.0 test
+> vitest
+
+
+ DEV  v4.0.7 /home/sina/Documents/Codingan/pemweb/pemrograman_web_itera_123140107/varasinafarmadani_123140107_pertemuan3
+
+ ✓ src/tests/BookList.test.jsx (1 test) 40ms
+ ✓ src/tests/BookFilter.test.jsx (1 test) 82ms
+ ✓ src/tests/Stats.test.jsx (1 test) 72ms
+ ✓ src/tests/BookForm.test.jsx (1 test) 128ms
+ ✓ src/tests/App.test.jsx (1 test) 94ms
+ ✓ src/tests/Search.test.jsx (1 test) 137ms
+
+ Test Files  6 passed (6)
+      Tests  6 passed (6)
+   Start at  20:39:42
+   Duration  2.35s (transform 784ms, setup 897ms, collect 2.69s, tests 552ms, environment 7.12s, prepare 180ms)
+```
+
+---
+
+### **7) Analisis & Hook yang Digunakan**
+
+* `useLocalStorage`
+  → Mengelola penyimpanan data buku secara sinkron dengan localStorage.
+* `useBookStats`
+  → Menghitung statistik total buku, milik, baca, dan beli.
+* `useFilteredBooks`
+  → Memfilter daftar buku berdasarkan status dan query pencarian.
+
+---
+
