@@ -255,7 +255,7 @@ buka dengan browser yang anda gunakan.
 ---
 
 ## 5) Screenshot 
-### UI (landscape & portait)
+### UI (landscape)
 ![UI landscape](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-20-32.png)
 ### Fitur CRUD dasar pada Tugas dan Catatan
 ![Tambah Hapus Edit](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas2/Screenshot_2025-10-27_19-26-30.png)
@@ -328,7 +328,17 @@ Framework utama:
 ---
 
 ### **3) Screenshot**
-ntar
+### UI (landscape)
+![UI landscape](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas3/ui.png)
+### Fitur CRUD dasar
+![Tambah](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas3/add.png)
+![Hasil Tambah](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas3/added.png)
+![Edit](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas3/edit.png)
+### Search
+![Search + Filter](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas3/searchfiler.png)
+### Statistik
+![Statistik](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas3/statistik.png)
+
 
 ---
 
