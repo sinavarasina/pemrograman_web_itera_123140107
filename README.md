@@ -328,6 +328,7 @@ Framework utama:
 ---
 
 ### **3) Screenshot**
+
 ### UI (landscape)
 ![UI landscape](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas3/ui.png)
 ### Fitur CRUD dasar
@@ -338,7 +339,6 @@ Framework utama:
 ![Search + Filter](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas3/searchfiler.png)
 ### Statistik
 ![Statistik](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas3/statistik.png)
-
 
 ---
 
