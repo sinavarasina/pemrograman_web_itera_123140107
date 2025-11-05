@@ -290,12 +290,12 @@ buka dengan browser yang anda gunakan.
 
 ---
 
-# **Tugas Praktikum 3 — React Dasar**
-## **Aplikasi Manajemen Buku Pribadi**
+# Tugas Praktikum 3 — React Dasar
+## Aplikasi Manajemen Buku Pribadi
 
 ---
 
-### **1) Deskripsi Singkat Aplikasi**
+### 1) Deksripsi Singkat
 
 Aplikasi ini dibuat untuk memenuhi tugas **Praktikum Pemrograman Web — React Dasar**.
 Fungsinya untuk mengelola daftar buku pribadi dengan fitur **menambah**, **mengedit**, **menghapus**, **mencari**, dan **memfilter** berdasarkan status.
@@ -309,7 +309,7 @@ Framework utama:
 
 ---
 
-### **2) Daftar Fitur**
+### 2) Daftar Fitur
 
 | No | Fitur                               | Status | Implementasi                       |
 | -- | ----------------------------------- | :----: | ---------------------------------- |
@@ -327,7 +327,7 @@ Framework utama:
 
 ---
 
-### **3) Screenshot**
+### 3) Screenshot
 
 ### UI (landscape)
 ![UI landscape](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas3/ui.png)
@@ -342,7 +342,7 @@ Framework utama:
 
 ---
 
-### **4) Cara Menjalankan**
+### 4) Cara Menjalankan
 
 ```bash
 # Clone repository
@@ -363,7 +363,7 @@ npm run test
 
 ---
 
-### **5) Struktur Proyek**
+### 5) Struktur Proyek
 
 ```
 src/
@@ -398,7 +398,7 @@ src/
 
 ---
 
-### **6) Laporan Testing**
+### 6) Laporan Testing
 
 ```
 npm run test
@@ -424,7 +424,7 @@ npm run test
 
 ---
 
-### **7) Analisis & Hook yang Digunakan**
+### 7) Analisis & Hook yang Digunakan
 
 * `useLocalStorage`
   → Mengelola penyimpanan data buku secara sinkron dengan localStorage.
