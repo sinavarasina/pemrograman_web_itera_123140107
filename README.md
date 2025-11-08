@@ -26,6 +26,18 @@
   - [5) Struktur Proyek](#5-struktur-proyek)
   - [6) Laporan Testing](#6-laporan-testing)
   - [7) Analisis & Hook yang Digunakan](#7-analisis--hook-yang-digunakan)
+- [Tugas Praktikum 4](#tugas-praktikum-4)
+
+  - [Aplikasi Pengelolaan Nilai Mahasiswa (Python Dasar)](#aplikasi-pengelolaan-nilai-mahasiswa-python-dasar)
+  - [1) Deskripsi Singkat](#1-deskripsi-singkat-3)
+  - [2) Daftar Fitur yang Telah Diimplementasikan](#2-daftar-fitur-yang-telah-diimplementasikan-1)
+  - [3) Screenshot](#3-screenshot-2)
+  - [4) Cara Menjalankan](#4-cara-menjalankan-2)
+  - [5) Struktur Proyek](#5-struktur-proyek-1)
+  - [6) Checklist Kesesuaian Tugas](#6-checklist-kesesuaian-tugas-1)
+  - [7) Catatan Teknis](#7-catatan-teknis-1)
+
+
 </details>
 
 ---
@@ -435,3 +447,101 @@ npm run test
 
 ---
 
+# [Tugas Praktikum 4](https://github.com/sinavarasina/pemrograman_web_itera_123140107/tree/main/varasinafarmadani_123140107_pertemuan4)
+
+## Aplikasi Pengelolaan Nilai Mahasiswa (Python Dasar)
+
+---
+
+## 1) Deskripsi Singkat
+
+Aplikasi **Pengelolaan Nilai Mahasiswa** adalah program berbasis **Python** untuk mengelola data nilai mahasiswa secara interaktif melalui terminal.
+Aplikasi ini merupakan implementasi konsep dasar Python seperti **fungsi, struktur data (list & dictionary), modularisasi, dan input/output**.
+Setiap mahasiswa memiliki tiga komponen nilai (UTS, UAS, dan Tugas), yang kemudian dihitung menjadi nilai akhir dan diberikan grade otomatis.
+
+---
+
+## 2) Daftar Fitur yang Telah Diimplementasikan
+
+| **No** | **Fitur / Persyaratan**                                   | **Status** | **Implementasi**                                                                                             |
+| :----: | :-------------------------------------------------------- | :--------: | :----------------------------------------------------------------------------------------------------------- |
+|    1   | Input data mahasiswa baru                                 |      ✅     | Fungsi `make_new_mahasiswa()` di `mahasiswa.py` menerima input interaktif dengan validasi angka 0–100.       |
+|    2   | Menampilkan seluruh data mahasiswa dalam bentuk tabel     |      ✅     | Fungsi `print_tabel()` di `utils.py` menampilkan tabel dengan kolom UTS, UAS, Tugas, Nilai Akhir, dan Grade. |
+|    3   | Menghitung nilai akhir (30% UTS + 40% UAS + 30% Tugas)    |      ✅     | `calculate_finscore()` di `nilai.py`.                                                                        |
+|    4   | Menentukan grade (A–E) berdasarkan nilai akhir            |      ✅     | `get_grade()` di `nilai.py`.                                                                                 |
+|    5   | Menampilkan mahasiswa dengan nilai tertinggi dan terendah |      ✅     | `get_highest()` dan `get_lowest()` di `nilai.py`.                                                            |
+|    6   | Filter mahasiswa berdasarkan grade                        |      ✅     | `filter_by_grade()` di `nilai.py`.                                                                           |
+|    7   | Menghitung rata-rata nilai kelas (UTS, UAS, Tugas, Akhir) |      ✅     | `get_mean()` di `nilai.py`.                                                                                  |
+|    8   | Menu interaktif untuk semua fitur di atas                 |      ✅     | Loop `while` di `main.py` sebagai controller/orchestrator.                                                   |
+|    9   | Modularisasi kode (multi-file)                            |      ✅     | Semua fungsi dipisah ke file berbeda untuk keterbacaan dan kemudahan maintenance.                            |
+
+---
+
+## 3) Screenshot
+ntar
+
+---
+
+## 4) Cara Menjalankan
+
+> Sebelum menjalankan, pastikan Python sudah terpasang di sistem:
+
+```bash
+python3 --version
+```
+
+### Menjalankan program:
+
+```bash
+# Clone repository
+git clone https://github.com/sinavarasina/pemrograman_web_itera_123140107.git
+
+# Masuk ke direktori tugas
+cd pemrograman_web_itera_123140107/varasinafarmadani_123140107_pertemuan4
+
+# Jalankan program
+python3 main.py
+```
+
+---
+
+## 5) Struktur Proyek
+
+```
+📁 varasinafarmadani_123140107_pertemuan4/
+├── main.py          # Main function & loop menu & orchestrator
+├── mahasiswa.py     # Input data mahasiswa
+├── nilai.py         # Perhitungan nilai & analisis data
+└── utils.py         # Format tampilan tabel
+```
+
+---
+
+## 6) Checklist Kesesuaian Tugas
+
+* [x] Minimal 5 data mahasiswa (tipe list berisi dictionary).
+* [x] Perhitungan nilai akhir (30% UTS, 40% UAS, 30% Tugas).
+* [x] Penentuan grade (A ≥80, B ≥70, C ≥60, D ≥50, E <50).
+* [x] Fungsi untuk nilai tertinggi & terendah.
+* [x] Filter mahasiswa berdasarkan grade.
+* [x] Hitung rata-rata nilai kelas (UTS, UAS, Tugas, Akhir).
+* [x] Tampilan tabel rapi dengan kolom lengkap.
+* [x] Modularisasi kode ke beberapa file Python.
+* [x] Input/output interaktif.
+* [x] Dokumentasi lengkap di README.
+
+---
+
+## 7) Catatan Teknis
+
+* Semua data mahasiswa disimpan dalam **list of dictionaries** untuk kemudahan manipulasi.
+* Modularisasi diterapkan agar setiap file memiliki satu tanggung jawab:
+
+  * `nilai.py` → logika perhitungan & analisis data.
+  * `mahasiswa.py` → input mahasiswa baru.
+  * `utils.py` → tampilan tabel.
+  * `main.py` → menu utama & pemanggilan fungsi.
+* Nilai akhir dan grade dihitung secara otomatis setiap kali data ditampilkan.
+* Fungsi `get_mean()` menghitung rata-rata per-komponen (UTS, UAS, Tugas, Akhir).
+
+---
