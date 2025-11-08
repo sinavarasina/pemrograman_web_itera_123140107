@@ -522,7 +522,7 @@ python3 main.py
 ## 5) Struktur Proyek
 
 ```
-📁 varasinafarmadani_123140107_pertemuan4/
+varasinafarmadani_123140107_pertemuan4/
 ├── main.py          # Main function & loop menu & orchestrator
 ├── mahasiswa.py     # Input data mahasiswa
 ├── nilai.py         # Perhitungan nilai & analisis data
