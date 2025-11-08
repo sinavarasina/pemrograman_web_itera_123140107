@@ -478,7 +478,20 @@ Setiap mahasiswa memiliki tiga komponen nilai (UTS, UAS, dan Tugas), yang kemudi
 ---
 
 ## 3) Screenshot
-ntar
+### Tampilkan semua data mahasiswa (menu 1)
+![Print Tabel Mahasiswa](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas4/menu1.png)
+### Tambah data mahasiswa (menu 2)
+![Tambah](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas4/menu2.png)
+### Tampilkan nilai tertinggi (menu 3)
+![Nilai Tertinggi](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas4/menu3.png)
+### Tampilkan nilai terendah (menu 4)
+![Nilai Terendah](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas4/menu4.png)
+### Filter by Grade (menu 5)
+![Filter by Grade](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas4/menu5.png)
+### Tampilkan nilai rata rata
+![Mean](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas4/menu6.png)
+### Keluar dari program
+![Exit](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas4/menu0.png)
 
 ---
 
@@ -502,6 +515,7 @@ cd pemrograman_web_itera_123140107/varasinafarmadani_123140107_pertemuan4
 # Jalankan program
 python3 main.py
 ```
+![Run](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas4/how_to_run.png)
 
 ---
 
