@@ -16,7 +16,6 @@ class Library:
         self._load_from_storage()
 
     def _load_from_storage(self):
-        """Membaca data JSON ke dalam struktur SOA."""
         data = self._storage.load()
         for item in data:
             self._ids.append(item["id"])
@@ -28,6 +27,33 @@ class Library:
 
     def _sync_storage(self):
         self._storage.save(self.get_all_items())
+
+    def get_all_items(self):
+        return [
+            {
+                "id": self._ids[i],
+                "title": self._titles[i],
+                "author": self._authors[i],
+                "type": self._types[i],
+                "extra": self._extra[i],
+                "borrowed": self._is_borrowed[i],
+            }
+            for i in range(len(self._ids))
+        ]
+
+    def search_items(self, keyword):
+        results = []
+        for i in range(len(self._titles)):
+            if keyword.lower() in self._titles[i].lower():
+                results.append({
+                    "id": self._ids[i],
+                    "title": self._titles[i],
+                    "author": self._authors[i],
+                    "type": self._types[i],
+                    "extra": self._extra[i],
+                    "borrowed": self._is_borrowed[i],
+                })
+        return results
 
     def add_item(self, item: LibraryItem):
         self._ids.append(item._id)
@@ -42,6 +68,7 @@ class Library:
             self._extra.append("-")
         self._is_borrowed.append(False)
         self._sync_storage()
+        return True, f"[OK] Item '{item.title}' berhasil ditambahkan."
 
     def delete_item(self, id):
         if id in self._ids:
@@ -56,8 +83,8 @@ class Library:
             ):
                 arr.pop(idx)
             self._sync_storage()
-            return True, f"Item dengan ID {id} dihapus."
-        return False, "ID tidak ditemukan."
+            return True, f"[OK] Item dengan ID {id} dihapus."
+        return False, f"[WARN] ID {id} tidak ditemukan."
 
     def borrow(self, id):
         if id in self._ids:
@@ -65,9 +92,9 @@ class Library:
             if not self._is_borrowed[idx]:
                 self._is_borrowed[idx] = True
                 self._sync_storage()
-                return True, f"{self._titles[idx]} berhasil dipinjam."
-            return False, f"{self._titles[idx]} sudah dipinjam."
-        return False, "ID tidak ditemukan."
+                return True, f"[OK] '{self._titles[idx]}' berhasil dipinjam."
+            return False, f"[WARN] '{self._titles[idx]}' sudah dipinjam."
+        return False, f"[ERROR] ID {id} tidak ditemukan."
 
     def return_item(self, id):
         if id in self._ids:
@@ -75,6 +102,6 @@ class Library:
             if self._is_borrowed[idx]:
                 self._is_borrowed[idx] = False
                 self._sync_storage()
-                return True, f"{self._titles[idx]} dikembalikan."
-            return False, f"{self._titles[idx]} belum dipinjam."
-        return False, "ID tidak ditemukan."
+                return True, f"[OK] '{self._titles[idx]}' dikembalikan."
+            return False, f"[WARN] '{self._titles[idx]}' belum dipinjam."
+        return False, f"[ERROR] ID {id} tidak ditemukan."

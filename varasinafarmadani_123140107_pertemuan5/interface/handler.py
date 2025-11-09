@@ -4,7 +4,6 @@ from library.magazine import Magazine
 
 
 class LibraryCommandHandler:
-
     def __init__(self, view):
         self.lib = Library()
         self.view = view
@@ -26,6 +25,7 @@ class LibraryCommandHandler:
         self.view.show_message(success, msg)
 
     def add(self):
+        print("[INFO] Tambah item baru ke perpustakaan.")
         print("1. Book\n2. Magazine")
         kind = input("Pilih jenis (1/2): ").strip()
         id = int(input("ID: "))
@@ -37,8 +37,8 @@ class LibraryCommandHandler:
         else:
             issue = input("Edisi: ")
             item = Magazine(id, title, author, issue)
-        self.lib.add_item(item)
-        self.view.show_message(True, f"{title} berhasil ditambahkan.")
+        success, msg = self.lib.add_item(item)
+        self.view.show_message(success, msg)
 
     def delete_item(self, id):
         success, msg = self.lib.delete_item(id)
