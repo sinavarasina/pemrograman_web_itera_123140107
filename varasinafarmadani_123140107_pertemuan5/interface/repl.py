@@ -52,10 +52,10 @@ class LibraryRepl:
                     self.handler.search(*args)
                 else:
                     print("Gunakan: search <id|title> <kata_kunci>")
-            elif command in ("borrow", "return"):
+            elif command in ("borrow", "return", "delete"):
                 if args:
                     arg = " ".join(args)
-                    if command in ("borrow", "return"):
+                    if command in ("borrow", "return", "delete"):
                         if not arg.isdigit():
                             print("Gunakan angka untuk ID.")
                             return
