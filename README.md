@@ -27,7 +27,6 @@
   - [6) Laporan Testing](#6-laporan-testing)
   - [7) Analisis & Hook yang Digunakan](#7-analisis--hook-yang-digunakan)
 - [Tugas Praktikum 4](#tugas-praktikum-4)
-
   - [Aplikasi Pengelolaan Nilai Mahasiswa (Python Dasar)](#aplikasi-pengelolaan-nilai-mahasiswa-python-dasar)
   - [1) Deskripsi Singkat](#1-deskripsi-singkat-3)
   - [2) Daftar Fitur yang Telah Diimplementasikan](#2-daftar-fitur-yang-telah-diimplementasikan-1)
@@ -36,6 +35,17 @@
   - [5) Struktur Proyek](#5-struktur-proyek-1)
   - [6) Checklist Kesesuaian Tugas](#6-checklist-kesesuaian-tugas-1)
   - [7) Catatan Teknis](#7-catatan-teknis-1)
+- [Tugas Praktikum 5](#tugas-praktikum-5)
+  - [1) Deskripsi Singkat](#1-deskripsi-singkat)
+  - [2) Fitur Utama](#2-fitur-utama)
+  - [3) Implementasi Konsep OOP](#3-implementasi-konsep-oop)
+  - [4) Struktur Proyek](#4-struktur-proyek)
+  - [5) Cara Menjalankan](#5-cara-menjalankan)
+  - [6) Contoh Penggunaan](#6-contoh-penggunaan)
+  - [7) Screenshot](#7-screenshot)
+  - [8) Checklist Kesesuaian Tugas](#8-checklist-kesesuaian-tugas)
+  - [9) Catatan Teknis](#9-catatan-teknis)
+  - [10) Kesimpulan](#10-kesimpulan)
 
 
 </details>
@@ -559,3 +569,141 @@ varasinafarmadani_123140107_pertemuan4/
 * Fungsi `get_mean()` menghitung rata-rata per-komponen (UTS, UAS, Tugas, Akhir).
 
 ---
+
+# [Tugas Praktikum 5](https://github.com/sinavarasina/pemrograman_web_itera_123140107/tree/main/varasinafarmadani_123140107_pertemuan5)
+
+## Sistem Manajemen Perpustakaan Sederhana (Python OOP)
+
+---
+
+## 1) Deskripsi Singkat
+
+Program ini merupakan **implementasi konsep Object-Oriented Programming (OOP)** menggunakan **Python 3**, dengan penerapan prinsip **Abstraksi, Inheritance, Encapsulation, dan Polymorphism**.
+Aplikasi berjalan pada terminal (CLI) dan mensimulasikan **sistem manajemen perpustakaan sederhana**: pengguna dapat menambah, menampilkan, mencari, meminjam, mengembalikan, dan menghapus buku atau majalah.
+
+Seluruh data disimpan otomatis dalam **file JSON** (`library_data.json`) melalui kelas `JsonStorage`.
+
+---
+
+## 2) Fitur Utama
+
+| No | Fitur                     | Deskripsi                                          |
+| -- | ------------------------- | -------------------------------------------------- |
+| 1  | Tambah Item               | Menambah item baru (Book/Magazine) ke perpustakaan |
+| 2  | Tampilkan Semua Item      | Menampilkan koleksi dalam bentuk tabel rapi        |
+| 3  | Pencarian                 | Mencari item berdasarkan **ID** atau **Judul**     |
+| 4  | Peminjaman & Pengembalian | Mengubah status (Tersedia ↔ Dipinjam)              |
+| 5  | Hapus Item                | Menghapus item berdasarkan ID                      |
+| 6  | Penyimpanan Otomatis      | Data disimpan ke JSON setiap ada perubahan         |
+
+---
+
+## 3) Implementasi Konsep OOP
+
+| Konsep                     | Implementasi                                                              |
+| :------------------------- | :------------------------------------------------------------------------ |
+| **Abstraction**            | `LibraryItem` adalah kelas abstrak (`ABC`) dengan method abstrak `info()` |
+| **Inheritance**            | `Book` dan `Magazine` mewarisi `LibraryItem`                              |
+| **Encapsulation**          | Atribut `_id`, `_title`, `_author` bersifat protected                     |
+| **Polymorphism**           | `info()` dioverride pada tiap subclass                                    |
+| **Property Decorator**     | Atribut `title` menggunakan `@property`                                   |
+| **Composition**            | `Library` mengandung `JsonStorage` untuk persistensi data                 |
+| **Struct of Arrays (SoA)** | Pendekatan eksperimental untuk efisiensi internal data                    |
+
+---
+
+## 4) Struktur Proyek
+
+```
+varasinafarmadani_123140107_pertemuan5/
+├── library/
+│   ├── __init__.py
+│   ├── base.py              # Abstract class LibraryItem
+│   ├── book.py              # Subclass Book
+│   ├── magazine.py          # Subclass Magazine
+│   ├── json_storage.py      # Penyimpanan data JSON
+│   └── library_manager.py   # Manajemen koleksi
+│
+├── interface/
+│   ├── __init__.py
+│   ├── base.py              # Interface dasar CLI
+│   ├── cli.py               # Tampilan tabel & pesan
+│   ├── handler.py           # Handler command
+│   └── repl.py              # Command-loop REPL
+│
+├── library_data.json        # File penyimpanan data
+├── main.py                  # Entry point
+└── .gitignore
+```
+
+---
+
+## 5) Cara Menjalankan
+
+> Pastikan Python 3.x sudah terinstal
+
+```bash
+# Clone repository
+git clone https://github.com/sinavarasina/pemrograman_web_itera_123140107.git
+
+# Masuk ke direktori praktikum 5
+cd pemrograman_web_itera_123140107/varasinafarmadani_123140107_pertemuan5
+
+# Jalankan program
+python3 main.py
+```
+
+Tampilan awal:
+
+```
+[INFO] Data disimpan otomatis ke 'library_data.json'
+
+=== Sistem Manajemen Perpustakaan Sederhana ===
+    Varasina Farmadani - 123140107
+Ketik 'help' untuk melihat daftar perintah.
+>
+```
+
+---
+
+## 6) Screenshot
+
+### Menjalankan Program
+![run](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas5/run.png)
+
+### Menambah Item
+![add](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas5/add.png)
+
+### Menampilkan Daftar
+![list](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas5/list.png)
+
+### Peminjaman & Pengembalian
+![borrow](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas5/borrow.png)
+![borrow-return](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas5/borrowreturn.png)
+
+### Pencarian (ID & Title)
+![search-id](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas5/searchid.png)
+![search-title](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas5/searchtitle.png)
+
+### Penghapusan
+![delete](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas5/delete.png)
+
+### Exit
+![exit](https://raw.githubusercontent.com/sinavarasina/pemrograman_web_itera_123140107/refs/heads/main/screenshoot/tugas5/exit.png)
+
+---
+
+## 7) Checklist Kesesuaian Tugas
+
+| Kriteria                      | Status | Implementasi                                          |
+| :---------------------------- | :----: | :---------------------------------------------------- |
+| Abstract Class & Inheritance  |    ✅   | `LibraryItem` → `Book`, `Magazine`                    |
+| Encapsulation                 |    ✅   | Atribut protected (`_id`, `_title`, `_author`)        |
+| Polymorphism                  |    ✅   | Method `info()` dioverride                            |
+| Property Decorator            |    ✅   | Akses `title` via `@property`                         |
+| Fungsionalitas CRUD           |    ✅   | `add`, `list`, `search`, `borrow`, `return`, `delete` |
+| Penyimpanan Data (JSON)       |    ✅   | `JsonStorage`                                         |
+| CLI Interface                 |    ✅   | `CliInterface`                                        |
+
+---
+
