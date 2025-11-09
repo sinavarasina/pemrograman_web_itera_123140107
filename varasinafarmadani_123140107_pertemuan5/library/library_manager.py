@@ -43,18 +43,34 @@ class Library:
             for i in range(len(self._ids))
         ]
 
-    def search_items(self, keyword):
+    def search_items(self, keyword, field="title"):
         results = []
-        for i in range(len(self._titles)):
-            if keyword.lower() in self._titles[i].lower():
-                results.append({
-                    "id": self._ids[i],
-                    "title": self._titles[i],
-                    "author": self._authors[i],
-                    "type": self._types[i],
-                    "extra": self._extra[i],
-                    "borrowed": self._is_borrowed[i],
-                })
+        if field == "id":
+            try:
+                keyword = int(keyword)
+            except ValueError:
+                return []
+            for i in range(len(self._ids)):
+                if self._ids[i] == keyword:
+                    results.append({
+                        "id": self._ids[i],
+                        "title": self._titles[i],
+                        "author": self._authors[i],
+                        "type": self._types[i],
+                        "extra": self._extra[i],
+                        "borrowed": self._is_borrowed[i],
+                    })
+        else:
+            for i in range(len(self._titles)):
+                if keyword.lower() in self._titles[i].lower():
+                    results.append({
+                        "id": self._ids[i],
+                        "title": self._titles[i],
+                        "author": self._authors[i],
+                        "type": self._types[i],
+                        "extra": self._extra[i],
+                        "borrowed": self._is_borrowed[i],
+                    })
         return results
 
     def add_item(self, item: LibraryItem):

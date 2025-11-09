@@ -7,12 +7,12 @@ class CliInterface(BaseInterface):
         if not items:
             print("Tidak ada data.")
             return
-        print(f"{'ID':<4} {'Tipe':<10} {'Judul':<25} {
+        print(f"{'ID':<4} {'Tipe':<10} {'Judul':<50} {
               'Penulis':<20} {'Keterangan':<15} {'Status':<10}")
-        print("-" * 90)
+        print("-" * 115)
         for item in items:
             status = "Dipinjam" if item["borrowed"] else "Tersedia"
-            print(f"{item['id']:<4} {item['type']:<10} {item['title']:<25} {
+            print(f"{item['id']:<4} {item['type']:<10} {item['title']:<50} {
                   item['author']:<20} {item['extra']:<15} {status:<10}")
 
     def show_search_result(self, results):

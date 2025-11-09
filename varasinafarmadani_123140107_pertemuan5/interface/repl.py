@@ -47,7 +47,12 @@ class LibraryRepl:
         if command in commands:
             if command == "help":
                 self.handler_help()
-            elif command in ("search", "borrow", "return"):
+            elif command == "search":
+                if args:
+                    self.handler.search(*args)
+                else:
+                    print("Gunakan: search <id|title> <kata_kunci>")
+            elif command in ("borrow", "return"):
                 if args:
                     arg = " ".join(args)
                     if command in ("borrow", "return"):
@@ -66,11 +71,12 @@ class LibraryRepl:
     def handler_help(self):
         print("""
 Daftar perintah yang tersedia:
-  add                Tambah item baru ke perpustakaan
-  list               Tampilkan seluruh item
-  search <judul>     Cari item berdasarkan judul
-  borrow <id>        Pinjam item berdasarkan ID
-  return <id>        Kembalikan item berdasarkan ID
-  help               Tampilkan daftar perintah ini
-  exit               Keluar dari aplikasi
+  add                              Tambah item baru ke perpustakaan
+  list                             Tampilkan seluruh item
+  search <id|title> <kata_kunci>   Cari item berdasarkan ID atau judul
+  borrow <id>                      Pinjam item berdasarkan ID
+  return <id>                      Kembalikan item berdasarkan ID
+  delete <id>                      Hapus item berdasarkan ID
+  help                             Tampilkan daftar perintah ini
+  exit                             Keluar dari aplikasi
 """)
