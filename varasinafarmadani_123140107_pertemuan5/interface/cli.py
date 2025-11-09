@@ -1,4 +1,4 @@
-from .base_interface import BaseInterface
+from .base import BaseInterface
 
 
 class CliInterface(BaseInterface):

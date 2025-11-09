@@ -1,12 +1,14 @@
 from .book import Book
 from .magazine import Magazine
 from .base import LibraryItem
+from .json_storage import JsonStorage
 
 
 class Library:
     def __init__(self):
         # SoA (Struct of Arrayy) sebagai kejahilan kecil wkwkwk,
         # izin buat begini (coba coba)
+        self._storage = JsonStorage("library_data.json")
         self._ids = []
         self._titles = []
         self._authors = []
