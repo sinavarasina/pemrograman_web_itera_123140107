@@ -9,7 +9,7 @@
   - [4) Cara menjalankan](#4-cara-menjalankan)
   - [5) Penjelasan teknis tentang penggunaan localStorage dan validasi form](#5-penjelasan-teknis-tentang-penggunaan-localstorage-dan-validasi-form)
 - [Tugas Praktikum 2](#tugas-praktikum-2)
-  - [Personal Dashboard — JavaScript Next-Gen (ES6+)](#personal-dashboard--javascript-nextgen-es6)
+  - [Personal Dashboard — JavaScript Next-Gen (ES6+)](#personal-dashboard--javascript-next-gen-es6)
   - [1) Deskripsi Singkat](#1-deskripsi-singkat-1)
   - [2) Implementasi Fitur ES6+ yang Diminta](#2-implementasi-fitur-es6-yang-diminta)
   - [3) Cara Menjalankan](#3-cara-menjalankan)
@@ -36,16 +36,17 @@
   - [6) Checklist Kesesuaian Tugas](#6-checklist-kesesuaian-tugas-1)
   - [7) Catatan Teknis](#7-catatan-teknis-1)
 - [Tugas Praktikum 5](#tugas-praktikum-5)
+  - [Sistem Manajemen Perpustakaan Sederhana (Python OOP)](#sistem-manajemen-perpustakaan-sederhana-python-oop)
   - [1) Deskripsi Singkat](#1-deskripsi-singkat-4)
   - [2) Fitur Utama](#2-fitur-utama)
   - [3) Implementasi Konsep OOP](#3-implementasi-konsep-oop)
   - [4) Struktur Proyek](#4-struktur-proyek-2)
   - [5) Cara Menjalankan](#5-cara-menjalankan-3)
-  - [6) Screenshot](#7-screenshot)
-  - [7) Checklist Kesesuaian Tugas](#8-checklist-kesesuaian-tugas)
-
+  - [6) Screenshot](#6-screenshot-2)
+  - [7) Checklist Kesesuaian Tugas](#7-checklist-kesesuaian-tugas)
 
 </details>
+
 
 ---
 
