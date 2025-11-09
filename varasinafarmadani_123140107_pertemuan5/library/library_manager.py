@@ -1,4 +1,3 @@
-# library/library_manager.py
 from .book import Book
 from .magazine import Magazine
 from .base import LibraryItem
@@ -26,42 +25,47 @@ class Library:
             self._extra.append("-")
         self._is_borrowed.append(False)
 
-    def list_items(self):
-        print("\n=== Koleksi Perpustakaan ===")
+    def get_all_items(self):
+        data = []
         for i in range(len(self._ids)):
-            status = "Dipinjam" if self._is_borrowed[i] else "Tersedia"
-            print(f"{self._types[i]} | {self._titles[i]} oleh {self._authors[i]} "
-                  f"({self._extra[i]}) - {status}")
+            data.append({
+                "id": self._ids[i],
+                "title": self._titles[i],
+                "author": self._authors[i],
+                "type": self._types[i],
+                "extra": self._extra[i],
+                "borrowed": self._is_borrowed[i],
+            })
+        return data
 
-    def search(self, keyword):
-        print(f"\nHasil pencarian untuk '{keyword}':")
-        found = False
+    def search_items(self, keyword):
+        result = []
         for i in range(len(self._titles)):
             if keyword.lower() in self._titles[i].lower():
-                print(
-                    f"  {self._types[i]} - {self._titles[i]} oleh {self._authors[i]}")
-                found = True
-        if not found:
-            print("  Tidak ditemukan.")
+                result.append({
+                    "id": self._ids[i],
+                    "title": self._titles[i],
+                    "author": self._authors[i],
+                    "type": self._types[i],
+                    "extra": self._extra[i],
+                    "borrowed": self._is_borrowed[i],
+                })
+        return result
 
     def borrow(self, id):
         if id in self._ids:
             idx = self._ids.index(id)
             if not self._is_borrowed[idx]:
                 self._is_borrowed[idx] = True
-                print(f"{self._titles[idx]} berhasil dipinjam.")
-            else:
-                print(f"{self._titles[idx]} sudah dipinjam.")
-        else:
-            print("ID tidak ditemukan.")
+                return True, f"{self._titles[idx]} berhasil dipinjam."
+            return False, f"{self._titles[idx]} sudah dipinjam."
+        return False, "ID tidak ditemukan."
 
     def return_item(self, id):
         if id in self._ids:
             idx = self._ids.index(id)
             if self._is_borrowed[idx]:
                 self._is_borrowed[idx] = False
-                print(f"{self._titles[idx]} dikembalikan.")
-            else:
-                print(f"{self._titles[idx]} belum dipinjam.")
-        else:
-            print("ID tidak ditemukan.")
+                return True, f"{self._titles[idx]} dikembalikan."
+            return False, f"{self._titles[idx]} belum dipinjam."
+        return False, "ID tidak ditemukan."
