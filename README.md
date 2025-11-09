@@ -36,16 +36,13 @@
   - [6) Checklist Kesesuaian Tugas](#6-checklist-kesesuaian-tugas-1)
   - [7) Catatan Teknis](#7-catatan-teknis-1)
 - [Tugas Praktikum 5](#tugas-praktikum-5)
-  - [1) Deskripsi Singkat](#1-deskripsi-singkat)
+  - [1) Deskripsi Singkat](#1-deskripsi-singkat-4)
   - [2) Fitur Utama](#2-fitur-utama)
   - [3) Implementasi Konsep OOP](#3-implementasi-konsep-oop)
-  - [4) Struktur Proyek](#4-struktur-proyek)
-  - [5) Cara Menjalankan](#5-cara-menjalankan)
-  - [6) Contoh Penggunaan](#6-contoh-penggunaan)
-  - [7) Screenshot](#7-screenshot)
-  - [8) Checklist Kesesuaian Tugas](#8-checklist-kesesuaian-tugas)
-  - [9) Catatan Teknis](#9-catatan-teknis)
-  - [10) Kesimpulan](#10-kesimpulan)
+  - [4) Struktur Proyek](#4-struktur-proyek-2)
+  - [5) Cara Menjalankan](#5-cara-menjalankan-3)
+  - [6) Screenshot](#7-screenshot)
+  - [7) Checklist Kesesuaian Tugas](#8-checklist-kesesuaian-tugas)
 
 
 </details>
